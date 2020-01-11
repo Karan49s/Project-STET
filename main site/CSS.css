@@ -63,3 +63,7 @@
     .download:hover .download-content {
         display: block;
     }
+    
+    .download-content :hover {
+        color: rgb(243, 13, 13);
+    }
