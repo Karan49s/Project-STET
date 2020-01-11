@@ -1,0 +1,29 @@
+.hea {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: whitesmoke;
+}
+
+.form {
+    padding-left: 20%;
+    padding-right: 20%;
+    background-color: whitesmoke;
+}
+
+.rhalf {
+    position: relative;
+    right: 0;
+}
+
+#container {
+    margin: auto;
+}
+
+#first {
+    float: left;
+}
+
+#second {
+    float: left;
+}

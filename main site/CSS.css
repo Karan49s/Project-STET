@@ -67,3 +67,17 @@
     .download-content :hover {
         color: rgb(243, 13, 13);
     }
+    
+    .lore {
+        position: absolute;
+        right: 0;
+        display: inline-block;
+    }
+    
+    .logreg {
+        display: none;
+    }
+    
+    .logbtn:target .logreg {
+        display: block;
+    }
