@@ -1,6 +1,7 @@
 var express       = require("express");
     app           = express();
     mongoose      = require("mongoose");
+    flash         = require("connect-flash");
     passport      = require("passport");
     LocalStrategy = require("passport-local");
     bodyParser    = require("body-parser");
@@ -9,7 +10,7 @@ var express       = require("express");
 mongoose.connect("mongodb://localhost:27017/stet",{useNewUrlParser:true});
 
 app.use(bodyParser.urlencoded({extended:true}));
-
+app.use(flash());
 app.set("view engine","ejs");
 app.use(require("express-session")({
     secret: "devansh",
@@ -27,6 +28,8 @@ passport.deserializeUser(User.deserializeUser());
 //used to add to all routes
 app.use(function(req,res,next){
     res.locals.currentUser = req.user;
+    res.locals.error =req.flash("error");
+    res.locals.success =req.flash("success");
     next();
 });
 app.get("/",function(req,res){
@@ -70,15 +73,18 @@ app.post("/login",passport.authenticate("local",{
 });
 
 function isLoggedIn(req,res,next){
-    if(req.isAuthenticated())
+    if(req.isAuthenticated()){
     return next();
-    else
+    }
+    req.flash("error","Please Login First");
     res.redirect("/login");
     }
 
     //logout
 app.get("/logout",function(req,res){
     req.logOut();
+    req.flash("success","Logged you out!!");
+
     res.redirect("/index");
 });
 
