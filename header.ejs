@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+    <title>STET</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="mycss.css">
+</head>
+<body>
+    <header>
+        <div class="media">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Seal_of_Sikkim_color.png" class="align-self-center mr-3" alt="..." width="150px" height="150px">
+            <div class="media-body">
+              <h1>Sikkim TET</h1>
+            </div>
+          </div>
+        </div>
+        </header>
+      </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>        
+            </li>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Downloads
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div></a>          
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Syllabus<span class="sr-only">(current)</span></a>
+              </li>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">About US <span class="sr-only">(current)</span></a>         
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Contact Us <span class="sr-only">(current)</span></a>         
+              </li>
+            </div>
+            <ul class="navbar-nav ml-md-auto">
+              <li class="nav-item active">
+                <% if(!currentUser){  %>
+                <a  href="/register" data-toggle="dropdown" class=" nav-link" >Register<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+				      <a href="/login" data-toggle="dropdown" class="nav-link" >Login<span class="sr-only">(current)</span></a>
+              </li>
+              <% } else { %>
+                <li> <a href="#">  </a></li>
+              <li class="nav-item active">
+               <li> <%= currentUser %></li>
+				      <a href="/logout" data-toggle="dropdown" class="nav-link" >Log Out<span class="sr-only">(current)</span></a>
+              </li>
+              <% } %>
+            </ul>
+        </div>
+      </nav>
