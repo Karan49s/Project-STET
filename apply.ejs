@@ -8,13 +8,85 @@
         </div>
     </header>
     <div class="row">
-        <div class="col-md-6">
-
+        <div class="col-md-6" >
+            <p style="padding: 10px;font: 1.5em sans-serif; color: #1e1bbe;">Student Details</p>
         </div>
-        <div class="col-md-6">
-
+        <div class="col-md-6" >
+            <p style="padding: 10px;font: 1.5em sans-serif; color: #1e1bbe;">Address Details</p>
+        </div>
+        <div class="col-md-6" style="border-radius : 10px;border: 1px solid #1e1bbe ;">
+            <p>Name <sup style="color: red;">*</sup> </p>
+            <div class="form-group">
+                <input class="form-control" type="text" name="cname" placeholder="Name" required="required">
+            </div>
+            <p>Father's / Husband’s Name <sup style="color: red;">*</sup></p>
+            <div class="form-group">
+                <input class="form-control" type="text" name="fhname"  required="required">
+            </div>
+            <p>Mother's Name</p>
+            <div class="form-group">
+                <input class="form-control" type="text" name="mname">
+            </div>
+            <p>Date of Birth <sup style="color: red;">*</sup></p>
+            <div class="form-group">
+                <input class="form-control" type="date" name="dob" placeholder="Date" required="required">
+            </div>
+            <p>Email <sup style="color: red;">*</sup></p>
+            <div class="form-group">
+                <input class="form-control" type="email" name="cmail" placeholder="Email" required="required">
+            </div>
+            <p>Contact Number <sup style="color: red;">*</sup></p>
+            <div class="form-group">
+                <input class="form-control" type="number" name="cnumber" placeholder="Contact Number" required="required">
+            </div>
+        </div>
+        <div class="col-md-6" style="border-radius : 10px;border: 1px solid #1e1bbe ;">
+            <p>Address <sup style="color: red;">*</sup></p>
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="House Number" required="required">
+            </div>
+            <p>Area <sup style="color: red;">*</sup></p>
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Location" required="required">
+            </div>
+            <p>City <sup style="color: red;">*</sup></p>
+            <div class="form-group">
+                <input class="form-control" type="text" name="ccity" placeholder="City" required="required">
+            </div>
+            <p>State <sup style="color: red;">*</sup></p>
+            <div class="form-group">
+                <input class="form-control" type="text" name="cstate" placeholder="State" required="required">
+            </div>
+            <p>Pincode<sup style="color: red;">*</sup></p>
+            <div class="form-group">
+                <input class="form-control" type="number" placeholder="Pincode" required="required">
+            </div>
+        </div>
+        <div class="col-md-12" >
+            <p style="padding: 10px;font: 1.5em sans-serif; color: #1e1bbe;">Other Details</p>
+        </div>
+        <div class="col-md-6" style="border-radius : 10px;border: 1px solid #1e1bbe ;">
+            <div>Select Language Paper Option</div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="inlineRadio1" value="English">
+                <label class="form-check-label" for="inlineRadio1">English</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="inlineRadio2" value="Hindi">
+                <label class="form-check-label" for="inlineRadio2">Hindi</label>
+              </div>
+              <div>Appeared for STET before ?</div>   
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="inlineRadio1" value="Yes">
+                <label class="form-check-label" for="inlineRadio1">Yes</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="inlineRadio2" value="No">
+                <label class="form-check-label" for="inlineRadio2">No</label>
+              </div>
         </div>
     </div>
+    <button class="btn btn-primary" style="float: right;">Submit</button>
 </div>
 
 <%- include('./partials/footer'); -%>
